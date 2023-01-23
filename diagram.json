@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Cindi Fiorentina",
+  "editor": "wokwi-cindi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp1",
+      "top": -19.06,
+      "left": -45.73,
+      "attrs": { "env": "micropython-20220618-v1.19.1" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -151.76, "left": -124.57, "attrs": {} },
+    { "type": "board-ssd1306", "id": "oled1", "top": -10.7, "left": 177.15, "attrs": {} }
+  ],
+  "connections": [
+    [ "oled1:GND", "esp1:GND.1", "black", [ "v-43.04", "h-105.26", "v188.48" ] ],
+    [ "oled1:VCC", "esp1:3V3", "red", [ "v-32.17", "h-81.18", "v179.42" ] ],
+    [ "oled1:SCL", "esp1:D22", "green", [ "v-19.48", "h-77.04", "v61.62" ] ],
+    [ "oled1:SDA", "esp1:D21", "blue", [ "v-48.48", "h-75.09", "v98.77", "h0.91" ] ],
+    [ "dht1:VCC", "esp1:VIN", "red", [ "v0" ] ],
+    [ "dht1:GND", "esp1:GND.2", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp1:D27", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
